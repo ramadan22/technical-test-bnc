@@ -1,0 +1,32 @@
+@mixin responsive($media) {
+  @if $media == mobile {
+    @media (min-width: 320px) {
+      @content;
+    }
+  }
+  @else if $media == mobile_l {
+    @media (min-width: 481px) {
+      @content;
+    }
+  }
+  @else if $media == tablet {
+    @media (min-width: 641px) {
+      @content;
+    }
+  }
+  @else if $media == tablet_l {
+    @media (min-width: 961px) {
+      @content;
+    }
+  }
+  @else if $media == tablet_large {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  }
+  @else if $media == dekstop {
+    @media (min-width: 1281px) {
+      @content;
+    }
+  }
+}

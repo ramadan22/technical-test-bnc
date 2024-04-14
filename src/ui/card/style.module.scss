@@ -1,0 +1,27 @@
+.wrap {
+  @apply overflow-hidden rounded relative;
+
+  & img {
+    @apply w-full h-full aspect-[4/5] object-cover;
+  }
+
+  & > a > div {
+    @apply py-1 px-2 flex justify-between items-center absolute z-[1] bottom-0 w-full bg-[#ffffffeb] gap-x-2;
+
+    & > p {
+      @apply flex-1;
+      @apply xl:text-lg lg:text-base text-sm;
+    }
+
+    & > div {
+      @apply flex items-center gap-x-0.5 text-yellow-500 mt-0.5;
+      @apply lg:mr-8 mr-5;
+    }
+  }
+
+  & button {
+    @apply flex items-center gap-x-0.5 text-yellow-500 absolute z-[2] right-0 bottom-0 mr-1;
+    @apply lg:mb-2 md:mb-2.5 mb-2.5;
+    @apply xl:text-lg lg:text-base text-sm;
+  }
+}

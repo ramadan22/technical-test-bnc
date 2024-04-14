@@ -1,0 +1,54 @@
+.navbar {
+  @apply w-full shadow-xl flex justify-center items-center fixed top-0 z-10 bg-white;
+
+  & > div:nth-child(1) {
+    @apply container flex items-center justify-between h-[80px] space-x-5;
+
+    & > a > img {
+      @apply w-[85px] h-[85px] flex flex-none object-contain;
+    }
+
+    & > div:nth-child(3) {
+      @apply flex items-center gap-x-2.5;
+    }
+  }
+}
+
+.toggleMenu {
+  @apply sm:hidden flex flex-1 justify-end p-2;
+}
+
+.wrapMenu {
+  @apply flex-1;
+  @apply sm:block hidden;
+}
+
+.customAntMenu {
+  @apply text-base font-semibold py-2 border-none #{!important};
+
+  :global {
+    .ant-menu-item:hover {
+      @apply text-[#ffb000] #{!important};
+
+      &::after {
+        @apply border-b-[#ffb000] #{!important};
+      }
+    }
+
+    .ant-menu-item-selected {
+      @apply text-[#ffb000] #{!important};
+
+      &::after {
+        @apply border-b-[#ffb000] #{!important};
+      }
+    }
+  }
+}
+
+.checked {
+  @apply bg-[#ffb000] #{!important};
+}
+
+.unChecked {
+  @apply bg-[#949494] #{!important};
+}

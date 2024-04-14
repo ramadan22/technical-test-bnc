@@ -1,0 +1,41 @@
+@import '~tailwindcss/base';
+@import '~tailwindcss/components';
+@import '~tailwindcss/utilities';
+  
+@font-face {
+  font-family: 'DMSans';
+  src: url('../fonts/DMSans/DMSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'DMSans';
+  src: url('../fonts/DMSans/DMSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'DMSans';
+  src: url('../fonts/DMSans/DMSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'DMSans';
+  src: url('../fonts/DMSans/DMSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@layer base {
+  body {
+    @apply font-dmSans;
+    overscroll-behavior-y: none;
+  }
+}
+
+@layer components {
+  .grid-list-movie {
+    @apply grid gap-5;
+    @apply lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2;
+  }
+}

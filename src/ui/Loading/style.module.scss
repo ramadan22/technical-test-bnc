@@ -1,0 +1,7 @@
+.wrap {
+  @apply flex flex-col gap-y-5 mt-5;
+
+  & .skeleton {
+    @apply bg-gray-200 aspect-4/5 overflow-hidden rounded relative
+  }
+}

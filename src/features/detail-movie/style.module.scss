@@ -1,0 +1,91 @@
+.wrap {
+  @apply relative;
+}
+
+.bgBlur {
+  @apply w-full backdrop-blur z-10 h-[50vh] bg-cover bg-center bg-fixed;
+}
+
+.buttonBack {
+  @apply absolute left-0 top-0 z-[1] mt-5 ml-5 text-white flex gap-x-2 items-center;
+
+  & > span:nth-child(1) {
+    @apply text-sm;
+  }
+
+  & > span:nth-child(2) {
+    @apply text-lg;
+  }
+}
+
+.loadingBanner {
+  @apply w-full h-[50vh] bg-gray-200 animate-pulse;
+}
+
+.loadingImage {
+  @apply bg-gray-200 animate-pulse;
+}
+
+.wrapMovieContent {
+  @apply
+    container relative -top-[150px];
+
+  & > div {
+    @apply
+      flex
+      gap-x-5
+      bg-white
+      rounded
+      shadow-lg
+      border-gray-100
+      overflow-hidden;
+    
+    @apply md:flex-row flex-col;
+
+    & > button > img,
+      .loadingImage {
+        @apply flex flex-none object-cover;
+        @apply md:w-[230px] w-full;
+        @apply md:h-[300px] h-auto;
+        @apply md:aspect-4/5 aspect-video;
+      }
+  
+    & > div {
+      @apply flex-1 py-4 text-lg pr-16 px-5;
+  
+      & > h1 {
+        @apply text-4xl;
+      }
+  
+      & > p:nth-child(3) {
+        @apply flex gap-x-2 mt-2.5 mb-2.5;
+  
+        & > span:nth-child(1) {
+          @apply border px-[6px] rounded-lg border-gray-300;
+        }
+  
+        & > span:nth-child(3) {
+          @apply text-gray-500 capitalize;
+        }
+      }
+  
+      & > p:nth-child(4) {
+        @apply text-base text-justify;
+      }
+  
+      & > div {
+        @apply flex text-3xl text-yellow-500 justify-self-end absolute right-0;
+        @apply md:bottom-0 top-0;
+        @apply md:mb-5 mb-0 md:mt-0 mt-2.5 md:mr-5 mr-8;
+      }
+    }
+  }
+}
+
+.contentParaph {
+  @apply container;
+  
+  h1 {
+    @apply text-2xl mb-2.5;
+  }
+}

@@ -1,0 +1,8 @@
+.wrap {
+  @apply bg-slate-400;
+  @apply lg:mt-32 mt-10;
+
+  & > div {
+    @apply text-center container text-white py-10;
+  }
+}
